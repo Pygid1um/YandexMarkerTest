@@ -41,4 +41,10 @@ public class BasePage {
         }
         assertTrue(checkboxButton.isSelected(), "Чекбокс '" + checkboxName + "' не выбран");
     }
+
+    protected void switchToWindow() {
+        for (String winHandle : driverManager.getDriver().getWindowHandles()) {
+            driverManager.getDriver().switchTo().window(winHandle);
+        }
+    }
 }

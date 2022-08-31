@@ -1,11 +1,11 @@
 package ds.anosov.framework.pages;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 
 public class FiltersPage6 extends BasePage {
 
@@ -22,8 +22,15 @@ public class FiltersPage6 extends BasePage {
     private WebElement showResultButton;
 
 
-    public FiltersPage6 selectPrice(String minPrice, String maxPrice) {
+    public FiltersPage6 checkAllFiltersTitlePage(String pageName) {
+        switchToWindow();
         wait.until(visibilityOf(allFiltersTitle));
+        Assertions.assertTrue(allFiltersTitle.getText().contains(pageName),
+                "Страница не открылась/открылась не правильная страница");
+        return this;
+    }
+
+    public FiltersPage6 selectPrice(String minPrice, String maxPrice) {
         fillInputField(priceMinimal.get(0), minPrice);
         fillInputField(priceMinimal.get(1), maxPrice);
         return pageManager.getFiltersPage6();

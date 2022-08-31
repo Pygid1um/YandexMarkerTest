@@ -9,6 +9,7 @@ public class TVsPage5 extends BasePage {
     private WebElement allFiltersButton;
 
     public FiltersPage6 clickAllFiltersButton() {
+        switchToWindow();
         waitUtilElementToBeClickable(allFiltersButton).click();
         return pageManager.getFiltersPage6();
     }
