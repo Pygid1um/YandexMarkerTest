@@ -3,7 +3,6 @@ package ds.anosov.framework.pages;
 import ds.anosov.framework.managers.DriverManager;
 import ds.anosov.framework.managers.PageManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class BasePage {
 
     protected DriverManager driverManager = DriverManager.getDriverManager();
-    protected JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverManager.getDriver();
     protected PageManager pageManager = PageManager.getPageManager();
     protected WebDriverWait wait = new WebDriverWait(driverManager.getDriver(), Duration.ofSeconds(10), Duration.ofSeconds(1));
 

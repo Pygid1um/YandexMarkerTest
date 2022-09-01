@@ -6,16 +6,18 @@ import org.openqa.selenium.support.FindBy;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
-public class ElectronicsPage3 extends BasePage {
+public class HeadphonesAndAudioEquipmentPage9 extends BasePage {
 
-    @FindBy(tagName = "//h3[text()='Электроника']")
+    @FindBy(tagName = "h1")
     private WebElement title;
 
-    public ElectronicsPage3 checkOpenElectronicsPage() {
+    public HeadphonesAndAudioEquipmentPage9 checkOpenHeadphonesAndAudioEquipmentPage(String pageName) {
         switchToWindow();
         wait.until(visibilityOf(title));
-        assertTrue(title.getText().contains("Электроника"),
+        assertTrue(title.getText().contains(pageName),
                 "Страница не открылась/открылась не правильная страница");
         return this;
     }
+
+
 }

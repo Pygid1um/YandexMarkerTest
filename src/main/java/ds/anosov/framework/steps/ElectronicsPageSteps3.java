@@ -7,8 +7,8 @@ public class ElectronicsPageSteps3 {
 
     PageManager pageManager = PageManager.getPageManager();
 
-    @И("^выбирает раздел \"(.*)\"$")
-    public void selectElectronicsMenu(String electronicsMenu) {
-        pageManager.getElectronicsPage().selectElectronicsMenu(electronicsMenu);
+    @И("^выбирает проверяет раздел Электроника2$")
+    public void checkOpenElectronicsPage() {
+        pageManager.getElectronicsPage().checkOpenElectronicsPage();
     }
 }

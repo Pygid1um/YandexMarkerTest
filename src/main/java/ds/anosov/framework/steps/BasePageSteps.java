@@ -24,10 +24,25 @@ public class BasePageSteps {
             case "Все результаты поиска":
                 pageManager.getSearchResult8().checkOpenSearchResultPage(pageName);
                 break;
-
-
+            case "Наушники и аудиотехника":
+                pageManager.getHeadphonesAndAudioEquipmentPage9().checkOpenHeadphonesAndAudioEquipmentPage(pageName);
+                break;
+            case "Наушники и Bluetooth-гарнитуры":
+                pageManager.getHeadphonesAndBluetoothHeadsetsPage10().checkOpenHeadphonesAndBluetoothHeadsetsPage(pageName);
+                break;
             default:
                 fail("Не правильно указано название страницы");
         }
     }
+
+    @И("^выбирает раздел \"(.*)\"$")
+    public void selectElectronicsMenu (String electronicsMenu){
+        pageManager.getCommonElementsPage().selectElectronicsMenu(electronicsMenu);
+    }
+
+    @И("^переходит в подменю \"(.*)\"$")
+    public void selectTvMenuSection(String sectionName) {
+        pageManager.getCommonElementsPage().selectMenuSection(sectionName);
+    }
+
 }

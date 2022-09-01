@@ -12,7 +12,7 @@ public class ResultTVsPageSteps7 {
         pageManager.getResultTVsPage7().checkAmountOfElements(amountElements);
     }
 
-    @И("^ищет в поисковой строке первый телевизор в списке$")
+    @И("^ищет в поисковой строке первый элемент в списке$")
     public void selectProductTv() {
         pageManager.getResultTVsPage7().selectProductTv();
     }

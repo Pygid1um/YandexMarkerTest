@@ -14,6 +14,9 @@ public class PageManager {
     private FiltersPage6 filtersPage6;
     private ResultTVsPage7 resultTVsPage7;
     private SearchResult8 searchResult8;
+    private HeadphonesAndAudioEquipmentPage9 headphonesAndAudioEquipmentPage9;
+    private CommonElementsPage commonElementsPage;
+    private HeadphonesAndBluetoothHeadsetsPage10 headphonesAndBluetoothHeadsetsPage10;
 
 
     private PageManager() {
@@ -83,6 +86,28 @@ public class PageManager {
         }
         return searchResult8;
     }
+
+    public HeadphonesAndAudioEquipmentPage9 getHeadphonesAndAudioEquipmentPage9() {
+        if (headphonesAndAudioEquipmentPage9 == null) {
+            headphonesAndAudioEquipmentPage9 = new HeadphonesAndAudioEquipmentPage9();
+        }
+        return headphonesAndAudioEquipmentPage9;
+    }
+
+    public CommonElementsPage getCommonElementsPage() {
+        if (commonElementsPage == null) {
+            commonElementsPage = new CommonElementsPage();
+        }
+        return commonElementsPage;
+    }
+
+    public HeadphonesAndBluetoothHeadsetsPage10 getHeadphonesAndBluetoothHeadsetsPage10() {
+        if (headphonesAndBluetoothHeadsetsPage10 == null) {
+            headphonesAndBluetoothHeadsetsPage10 = new HeadphonesAndBluetoothHeadsetsPage10();
+        }
+        return headphonesAndBluetoothHeadsetsPage10;
+    }
+
 
 
 }

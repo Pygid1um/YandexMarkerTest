@@ -11,7 +11,6 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class ResultTVsPage7 extends BasePage {
 
-    //10. Проверить, что элементов на странице 48
     @FindBy(xpath = "//div[@class='_3mStq _2y-pc']")
     private WebElement amountOfElements;
 
