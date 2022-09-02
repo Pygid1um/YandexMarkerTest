@@ -11,4 +11,15 @@ public class ElectronicsPageSteps3 {
     public void checkOpenElectronicsPage() {
         pageManager.getElectronicsPage().checkOpenElectronicsPage();
     }
+
+    @И("^выбирает раздел 'Телевизоры и аксессуары'$")
+    public void selectElectronicsMenu() {
+        pageManager.getElectronicsPage().selectTvsAndAccessoriesMenu();
+    }
+
+    @И("^выбирает раздел 'Наушники и аудиотехника'$")
+    public void selectHeadphonesAndAudioEquipmentPage() {
+        pageManager.getElectronicsPage().selectHeadphonesAndAudioEquipmentPage();
+    }
+
 }

@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HeadphonesAndBluetoothHeadsetsPage10 extends BasePage {
 
-    PageManager pageManager = PageManager.getPageManager();
-
     @FindBy(xpath = "//div[@data-grabber='SearchTitle']")
     private WebElement title;
 

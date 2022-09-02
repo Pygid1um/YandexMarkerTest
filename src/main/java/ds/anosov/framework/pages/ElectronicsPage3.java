@@ -11,6 +11,13 @@ public class ElectronicsPage3 extends BasePage {
     @FindBy(tagName = "//h3[text()='Электроника']")
     private WebElement title;
 
+    @FindBy(xpath = "//a[contains(@href, '26960170')]")
+    private WebElement TvsAndAccessoriesMenu;
+
+    @FindBy(xpath = "//a[contains(@href, '26992071')]")
+    private WebElement HeadphonesAndAudioEquipmentMenu;
+
+
     public ElectronicsPage3 checkOpenElectronicsPage() {
         switchToWindow();
         wait.until(visibilityOf(title));
@@ -18,4 +25,15 @@ public class ElectronicsPage3 extends BasePage {
                 "Страница не открылась/открылась не правильная страница");
         return this;
     }
+
+    public TVsAndAccessoriesPage4 selectTvsAndAccessoriesMenu() {
+        waitUtilElementToBeClickable(TvsAndAccessoriesMenu).click();
+        return pageManager.getTVsAndAccessoriesPage();
+    }
+
+    public HeadphonesAndAudioEquipmentPage9 selectHeadphonesAndAudioEquipmentPage() {
+        waitUtilElementToBeClickable(HeadphonesAndAudioEquipmentMenu).click();
+        return pageManager.getHeadphonesAndAudioEquipmentPage9();
+    }
+
 }

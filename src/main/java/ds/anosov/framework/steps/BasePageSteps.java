@@ -35,11 +35,6 @@ public class BasePageSteps {
         }
     }
 
-    @И("^выбирает раздел \"(.*)\"$")
-    public void selectElectronicsMenu (String electronicsMenu){
-        pageManager.getCommonElementsPage().selectElectronicsMenu(electronicsMenu);
-    }
-
     @И("^переходит в подменю \"(.*)\"$")
     public void selectTvMenuSection(String sectionName) {
         pageManager.getCommonElementsPage().selectMenuSection(sectionName);

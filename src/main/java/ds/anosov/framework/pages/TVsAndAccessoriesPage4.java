@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class TVsAndAccessoriesPage4 extends BasePage {
